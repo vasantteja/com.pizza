@@ -22,7 +22,7 @@ public class UserController {
     private UserService userService;
 
 
-    @ApiOperation(value = "View a list of available products",response = List.class)
+    @ApiOperation(value = "View a list of available users",response = List.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Successfully retrieved list"),
             @ApiResponse(code = 401, message = "You are not authorized to view the resource"),

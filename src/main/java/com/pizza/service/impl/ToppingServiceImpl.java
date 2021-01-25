@@ -37,5 +37,10 @@ public class ToppingServiceImpl implements ToppingService {
     public Topping save(Topping topping) {
         return toppingDao.save(topping);
     }
+
+    @Override
+    public void delete(long id) {
+        toppingDao.deleteById(id);
+    }
 }
 

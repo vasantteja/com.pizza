@@ -1,6 +1,7 @@
 package com.pizza.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -10,9 +11,11 @@ public class Topping {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
+    @ApiModelProperty(notes = "The database generated product ID")
     private long id;
 
     @Column
+    @ApiModelProperty(notes = "The topping.")
     private String topping;
 
     public long getId() {

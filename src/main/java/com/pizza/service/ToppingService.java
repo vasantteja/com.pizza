@@ -9,5 +9,6 @@ public interface ToppingService {
 
     Topping save(Topping user);
     List<Topping> findAll();
+    void delete(long id);
 
 }
