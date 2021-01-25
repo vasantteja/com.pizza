@@ -98,11 +98,18 @@
                 <artifactId>jib-maven-plugin</artifactId>
                 <version>2.4.0</version>
                 <configuration>
-                    <to>
-                        <image>vasantteja/pizzatoppingapi:${project.version}</image>
-                    </to>
+                    <from>
+                        <image>openjdk:11-jdk-slim</image>
+                    </from>
+                    <container>
+                        <ports>
+                            <port>8080</port>
+                            <port>15370</port>
+                        </ports>
+                    </container>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 </project>
