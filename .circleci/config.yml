@@ -20,19 +20,7 @@ jobs:
           name: Decrpyt Secrets
           command: openssl enc -d -aes-256-ecb -md md5 -in src/main/resources/application.properties.secrets -out src/main/resources/application.properties -k $SECRETS_KEY
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - spring-boot-security-oauth2-jwt-example-{{ checksum "pom.xml" }}
-
-      - run: mvn dependency:go-offline
-
-      - save_cache:
-          paths:
-            - ~/.m2
-          key: spring-boot-security-oauth2-jwt-example-{{ checksum "pom.xml" }}
-
-      # package into a jar
+     # package into a jar
       - run: mvn clean package
 
       # build and push docker image to docker hub
