@@ -1,14 +1,13 @@
-package com.devglan.service.impl;
+package com.pizza.service.impl;
 
-import com.devglan.dao.UserDao;
-import com.devglan.model.User;
-import com.devglan.service.UserService;
+import com.pizza.dao.UserDao;
+import com.pizza.model.User;
+import com.pizza.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -42,7 +41,7 @@ public class UserServiceImpl implements UserDetailsService, UserService {
 
 	@Override
 	public void delete(long id) {
-		userDao.delete(id);
+		userDao.deleteById(id);
 	}
 
 	@Override

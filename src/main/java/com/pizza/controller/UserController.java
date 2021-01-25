@@ -1,9 +1,8 @@
-package com.devglan.controller;
+package com.pizza.controller;
 
-import com.devglan.model.User;
-import com.devglan.service.UserService;
+import com.pizza.model.User;
+import com.pizza.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,10 +24,10 @@ public class UserController {
         return userService.save(user);
     }
 
-    @RequestMapping(value = "/user/{id}", method = RequestMethod.DELETE)
+/*    @RequestMapping(value = "/user/{id}", method = RequestMethod.DELETE)
     public String delete(@PathVariable(value = "id") Long id){
         userService.delete(id);
         return "success";
-    }
+    }*/
 
 }

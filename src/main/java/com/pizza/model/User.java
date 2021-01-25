@@ -1,4 +1,4 @@
-package com.devglan.model;
+package com.pizza.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

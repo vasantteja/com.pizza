@@ -1,6 +1,6 @@
-package com.devglan.service;
+package com.pizza.service;
 
-import com.devglan.model.User;
+import com.pizza.model.User;
 
 import java.util.List;
 
@@ -9,4 +9,5 @@ public interface UserService {
     User save(User user);
     List<User> findAll();
     void delete(long id);
+
 }
