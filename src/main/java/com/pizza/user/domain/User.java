@@ -1,4 +1,4 @@
-package com.pizza.model;
+package com.pizza.user.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModelProperty;
@@ -12,7 +12,7 @@ public class User {
     @GeneratedValue(strategy= GenerationType.AUTO)
     @ApiModelProperty(notes = "The database generated product ID")
     private long id;
-    @Column
+    @Column(name = "username")
     @ApiModelProperty(notes = "The user Id to login")
     private String username;
     @Column

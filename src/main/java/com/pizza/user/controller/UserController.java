@@ -1,7 +1,7 @@
-package com.pizza.controller;
+package com.pizza.user.controller;
 
-import com.pizza.model.User;
-import com.pizza.service.UserService;
+import com.pizza.user.domain.User;
+import com.pizza.user.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;

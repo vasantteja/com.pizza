@@ -1,4 +1,4 @@
-package com.pizza.model;
+package com.pizza.topping.domain;
 
 
 import io.swagger.annotations.ApiModelProperty;
@@ -16,7 +16,7 @@ public class Topping {
     @ApiModelProperty(notes = "The database generated product ID")
     private long id;
 
-    @Column
+    @Column(name = "topping")
     @ApiModelProperty(notes = "The name of the topping.")
     private String topping;
 

@@ -1,6 +1,6 @@
-package com.pizza.dao;
+package com.pizza.user.repository;
 
-import com.pizza.model.User;
+import com.pizza.user.domain.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,8 +1,8 @@
-package com.pizza.service.impl;
+package com.pizza.user.service.impl;
 
-import com.pizza.dao.UserDao;
-import com.pizza.model.User;
-import com.pizza.service.UserService;
+import com.pizza.user.repository.UserDao;
+import com.pizza.user.domain.User;
+import com.pizza.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

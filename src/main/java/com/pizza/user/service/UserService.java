@@ -1,6 +1,6 @@
-package com.pizza.service;
+package com.pizza.user.service;
 
-import com.pizza.model.User;
+import com.pizza.user.domain.User;
 
 import java.util.List;
 
