@@ -1,6 +1,7 @@
 package com.pizza.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.*;
 
@@ -9,15 +10,20 @@ public class User {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
+    @ApiModelProperty(notes = "The database generated product ID")
     private long id;
     @Column
+    @ApiModelProperty(notes = "The user Id to login")
     private String username;
     @Column
     @JsonIgnore
+    @ApiModelProperty(notes = "The user password")
     private String password;
     @Column
+    @ApiModelProperty(notes = "The user salary")
     private long salary;
     @Column
+    @ApiModelProperty(notes = "The user age")
     private int age;
 
     public long getId() {
