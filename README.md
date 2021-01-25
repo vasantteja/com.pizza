@@ -5,3 +5,12 @@ This project uses
 2. Java 11
 3. MySql
 
+## How to run this application
+
+1. Login into docker using credentials using this command
+`docker login --username myUsername --password myPassword`
+2. Pull the latest image using the following command
+   `docker run -it -p 8080:8080 -p 15370:15370 vasantteja/pizzatoppingapi:10 /bin/bash`
+
+
+   
