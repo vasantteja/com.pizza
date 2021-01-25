@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="spring-boot-security-oauth2-jwt-example" target="1.8" />
+      <module name="spring-boot-security-oauth2-jwt-example" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
