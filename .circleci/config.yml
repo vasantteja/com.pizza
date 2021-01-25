@@ -12,15 +12,16 @@ jobs:
 
       # setup testing env
       - setup_remote_docker:
-          docker_layer_caching: true
+          docker_layer_caching: false
       - run:
           name: Login to DockerHub
-          command: docker login -u vasanteja -p 2021@December
+          command: docker login -u $DOCKER_USER -p $DOCKER_PASS
       - run:
           name: Decrpyt Secrets
           command: openssl enc -d -aes-256-ecb -md md5 -in src/main/resources/application.properties.secrets -out src/main/resources/application.properties -k $SECRETS_KEY
 
-     # package into a jar
+
+      # package into a jar
       - run: mvn clean package
 
       # build and push docker image to docker hub
