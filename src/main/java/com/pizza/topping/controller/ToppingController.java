@@ -35,7 +35,8 @@ public class ToppingController {
     }
     )
     @RequestMapping(value="/fetchalltoppings", method = RequestMethod.GET, produces = "application/json")
-    public List<Topping> listUser(){
+    public List<Topping> fetchAllToppings(){
+        logger.debug("Retrieving all the toppings existing in the database");
         return toppingService.findAll();
     }
 
@@ -49,15 +50,15 @@ public class ToppingController {
 
     @ApiOperation(value = "Add a topping")
     @RequestMapping(value = "/createtopping", method = RequestMethod.POST, produces = "application/json")
-    public ResponseEntity create(@RequestBody Topping topping){
-         toppingService.save(topping);
+    public ResponseEntity createTopping(@RequestBody Topping topping){
         logger.debug("Creating the topping");
+        toppingService.save(topping);
         return new ResponseEntity("Topping saved successfully", HttpStatus.OK);
     }
 
     @ApiOperation(value = "Update a product")
     @RequestMapping(value = "/updatetopping", method = RequestMethod.PUT, produces = "application/json")
-    public ResponseEntity updateProduct(@RequestBody Topping topping){
+    public ResponseEntity updateTopping(@RequestBody Topping topping){
         logger.debug("Updating the topping");
         Optional<Topping> toppingOptional = toppingService.findOneBytopping(topping.getTopping());
         if(toppingOptional.isPresent()) {
@@ -81,7 +82,7 @@ public class ToppingController {
 
    @ApiOperation(value = "Delete a topping by id")
    @RequestMapping(value = "/deletetoppingbyid/{id}", method = RequestMethod.DELETE, produces = "application/json")
-    public ResponseEntity deleteById(@PathVariable(value = "id") Long id){
+    public ResponseEntity deleteByToppingId(@PathVariable(value = "id") Long id){
         logger.debug("Deleting the topping from the database using id.");
         toppingService.delete(id);
         return new ResponseEntity("Topping deleted successfully", HttpStatus.OK);

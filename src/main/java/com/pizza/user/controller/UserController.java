@@ -1,11 +1,14 @@
 package com.pizza.user.controller;
 
+import com.pizza.topping.controller.ToppingController;
 import com.pizza.user.domain.User;
 import com.pizza.user.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +20,8 @@ import java.util.List;
 @RequestMapping("/users")
 @Api(value="users")
 public class UserController {
+
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     private UserService userService;
@@ -30,14 +35,16 @@ public class UserController {
             @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
     }
     )
-    @RequestMapping(value="/user", method = RequestMethod.GET, produces = "application/json")
-    public List<User> listUser(){
+    @RequestMapping(value="/user/fetchallusers", method = RequestMethod.GET, produces = "application/json")
+    public List<User> fetchAllUsers(){
+        logger.debug("Retrieving all the users existing in the database");
         return userService.findAll();
     }
 
     @ApiOperation(value = "Add a user")
     @RequestMapping(value = "/user", method = RequestMethod.POST, produces = "application/json")
-    public ResponseEntity create(@RequestBody User user){
+    public ResponseEntity createUser(@RequestBody User user){
+        logger.debug("Creating the user");
         userService.save(user);
         return new ResponseEntity("Product saved successfully", HttpStatus.OK);
     }
@@ -45,6 +52,7 @@ public class UserController {
     @ApiOperation(value = "Delete a user")
     @RequestMapping(value = "/user/{id}", method = RequestMethod.DELETE, produces = "application/json")
     public ResponseEntity delete(@PathVariable(value = "id") Long id){
+        logger.debug("Deleting the user from the database using id.");
         userService.delete(id);
         return new ResponseEntity("User deleted successfully", HttpStatus.OK);
     }
