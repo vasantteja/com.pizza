@@ -6,6 +6,8 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +20,8 @@ import java.util.Optional;
 @RequestMapping("/toppings")
 @Api(value="toppings")
 public class ToppingController {
+
+    private static final Logger logger = LoggerFactory.getLogger(ToppingController.class);
 
     @Autowired
     private ToppingService toppingService;
@@ -38,6 +42,7 @@ public class ToppingController {
     @ApiOperation(value = "Search topping by topping name",response = Topping.class)
     @RequestMapping(value = "/fetchtoppingbyname/{toppingName}", method= RequestMethod.GET, produces = "application/json")
     public Topping fetchToppingByName(@PathVariable("toppingName") String toppingName){
+        logger.debug("Retrieving the topping using name");
         Optional<Topping> topping = toppingService.findOneBytopping(toppingName);
         return topping.isPresent() ? topping.get() : new Topping();
     }
@@ -46,12 +51,14 @@ public class ToppingController {
     @RequestMapping(value = "/createtopping", method = RequestMethod.POST, produces = "application/json")
     public ResponseEntity create(@RequestBody Topping topping){
          toppingService.save(topping);
+        logger.debug("Creating the topping");
         return new ResponseEntity("Topping saved successfully", HttpStatus.OK);
     }
 
     @ApiOperation(value = "Update a product")
     @RequestMapping(value = "/updatetopping", method = RequestMethod.PUT, produces = "application/json")
     public ResponseEntity updateProduct(@RequestBody Topping topping){
+        logger.debug("Updating the topping");
         Optional<Topping> toppingOptional = toppingService.findOneBytopping(topping.getTopping());
         if(toppingOptional.isPresent()) {
             Topping retrievedTopping = toppingOptional.get();
@@ -65,14 +72,17 @@ public class ToppingController {
             }
 
             toppingService.save(retrievedTopping);
+            logger.debug("The topping exists and we are updated it.");
             return new ResponseEntity("Topping updated successfully", HttpStatus.OK);
         }
+        logger.debug("The topping does not exist in the database.");
         return new ResponseEntity("Topping does not exist. Please verify!!", HttpStatus.NOT_FOUND);
     }
 
    @ApiOperation(value = "Delete a topping by id")
    @RequestMapping(value = "/deletetoppingbyid/{id}", method = RequestMethod.DELETE, produces = "application/json")
     public ResponseEntity deleteById(@PathVariable(value = "id") Long id){
+        logger.debug("Deleting the topping from the database using id.");
         toppingService.delete(id);
         return new ResponseEntity("Topping deleted successfully", HttpStatus.OK);
     }
@@ -80,6 +90,7 @@ public class ToppingController {
     @ApiOperation(value = "Delete a topping by topping name")
     @RequestMapping(value = "/deletetoppingbyname/{toppingname}", method = RequestMethod.DELETE, produces = "application/json")
     public ResponseEntity deleteByToppingName(@PathVariable(value = "toppingname") String toppingName){
+        logger.debug("Deleting the topping from the database using topping name.");
         toppingService.deleteByTopping(toppingName);
         return new ResponseEntity("Topping deleted successfully", HttpStatus.OK);
     }
