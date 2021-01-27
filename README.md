@@ -39,6 +39,8 @@ All the endpoints can be found by visiting `localhost:8080/api/swagger-ui.html` 
    grant_type-password
 
 ![alt text](https://github.com/vasantteja/com.pizza/blob/master/images/Body.png)
+
+5. Retrieve the access token by hitting the Send button adjacent to url. An example access token looks like below:
    
    
 
