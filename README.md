@@ -12,6 +12,30 @@ This project uses
 2. Pull the latest image using the following command
    `docker run -it -p 8080:8080 -p 15370:15370 vasantteja/pizzatoppingapi:10 /bin/bash`
    
+## Rest Endpoints
+
+All the endpoints can be found by visiting `localhost:8080/api/swagger-ui.html` after starting the application.
+
+## Testing the application using Postman tool
+
+### Step 1: Retrieve the OAuth token using postman
+
+1. Login into the Oauth website `http://localhost:8080/oauth/token`.
+
+2. In the Auth tab, select **Basic Auth** under **Type**.
+
+3. In the Auth tab, enter the user `devglan-client` as Username and `devglan-secret` as Password.
+
+4. In the Body tab, choose x-www-form-urlencoded and enter the following details:
+
+   username-Alex123
+   
+   password-password
+
+   grant_type-password
+   
+   
+
 ## Websites used during this project
 
 ### Swagger
