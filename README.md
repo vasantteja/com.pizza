@@ -14,27 +14,27 @@ This project uses
    
 ## Websites used during this project
 
-###Swagger
+### Swagger
 http://zarin.io/codelabs/springboot-api/#0
 
 https://springframework.guru/spring-boot-restful-api-documentation-with-swagger-2/
 
 https://www.dariawan.com/tutorials/spring/documenting-spring-boot-rest-api-swagger/
 
-###Docker
+### Docker
 https://reflectoring.io/spring-boot-docker/
 
 https://www.javadevjournal.com/spring-boot/dockerizing-spring-boot-application/
 
-###OAuth
+### OAuth
 https://www.devglan.com/spring-security/spring-boot-oauth2-jwt-example
 
 https://www.toptal.com/spring/spring-boot-oauth2-jwt-rest-protection
 
-###CircleCi
+### CircleCi
 https://medium.com/faun/setup-a-circleci-pipeline-for-a-containerized-spring-boot-app-93045fa060de
 
-###Postman
+### Postman
 https://stackoverflow.com/questions/18738820/how-postman-rest-client-raw-json-data-is-sent-to-server-in-post-put-calls
 
 
