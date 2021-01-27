@@ -6,6 +6,7 @@ import io.swagger.annotations.ApiModelProperty;
 import javax.persistence.*;
 
 @Entity
+@Table(name="User")
 public class User {
 
     @Id
@@ -15,16 +16,19 @@ public class User {
     @Column(name = "username")
     @ApiModelProperty(notes = "The user Id to login")
     private String username;
-    @Column
+    @Column(name="password")
     @JsonIgnore
     @ApiModelProperty(notes = "The user password")
     private String password;
-    @Column
-    @ApiModelProperty(notes = "The user salary")
-    private long salary;
-    @Column
-    @ApiModelProperty(notes = "The user age")
-    private int age;
+
+    public User(long id, String username, String password) {
+        super();
+        this.id = id;
+        this.username = username;
+        this.password = password;
+
+    }
+
 
     public long getId() {
         return id;
@@ -50,19 +54,5 @@ public class User {
         this.password = password;
     }
 
-    public long getSalary() {
-        return salary;
-    }
 
-    public void setSalary(long salary) {
-        this.salary = salary;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 }
