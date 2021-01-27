@@ -85,7 +85,7 @@ All the endpoints can be found by visiting `localhost:8080/api/swagger-ui.html` 
 
 ![alt text](https://github.com/vasantteja/com.pizza/blob/master/images/fetchingatoppingbyitsnameop.png)
 
-### Step 6: Updating a  topping
+### Step 6: Updating a topping
 
 1. This endpoint has been designed to update a topping.
 
@@ -100,6 +100,16 @@ All the endpoints can be found by visiting `localhost:8080/api/swagger-ui.html` 
 #### Output
 
 ![alt text](https://github.com/vasantteja/com.pizza/blob/master/images/updateatoppingop.png)
+
+### Step 7: Delete a topping
+
+1. This endpoint has been designed to delete a topping.
+
+2. We can access this endpoint by selecting DELETE and entering the url `http://localhost:8080/toppings/deletetoppingbyname/Bacon/?access_token=accessToken`
+
+![alt text](https://github.com/vasantteja/com.pizza/blob/master/images/updateatoppingop.png)
+
+
 
 
 
