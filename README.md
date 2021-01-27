@@ -41,6 +41,15 @@ All the endpoints can be found by visiting `localhost:8080/api/swagger-ui.html` 
 ![alt text](https://github.com/vasantteja/com.pizza/blob/master/images/Body.png)
 
 5. Retrieve the access token by hitting the Send button adjacent to url. An example access token looks like below:
+
+![alt text](https://github.com/vasantteja/com.pizza/blob/master/images/AccessToken.png)
+
+### Step 2: Fetching All users
+
+1. This endpoint has been designed to expose all users to the consumer.
+
+2. We can access this endpoint by selecting GET and entering the url `http://localhost:8080/users/user/fetchallusers?access_token=accessToken`
+
    
    
 
