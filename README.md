@@ -95,11 +95,13 @@ All the endpoints can be found by visiting `localhost:8080/api/swagger-ui.html` 
 
 #### Input
 
-![alt text](https://github.com/vasantteja/com.pizza/blob/master/images/inputfortoppingcreation.png)
+![alt text](https://github.com/vasantteja/com.pizza/blob/master/images/updateatoppingip.png)
 
 #### Output
 
-![alt text](https://github.com/vasantteja/com.pizza/blob/master/images/createtoppingop.png)
+![alt text](https://github.com/vasantteja/com.pizza/blob/master/images/updateatoppingop.png)
+
+
 
    
    
