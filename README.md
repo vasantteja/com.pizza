@@ -107,7 +107,7 @@ All the endpoints can be found by visiting `localhost:8080/api/swagger-ui.html` 
 
 2. We can access this endpoint by selecting DELETE and entering the url `http://localhost:8080/toppings/deletetoppingbyname/Bacon/?access_token=accessToken`
 
-![alt text](https://github.com/vasantteja/com.pizza/blob/master/images/updateatoppingop.png)
+![alt text](https://github.com/vasantteja/com.pizza/blob/master/images/deleteatoppingop.png)
 
 
 
