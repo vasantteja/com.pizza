@@ -68,6 +68,22 @@ All the endpoints can be found by visiting `localhost:8080/api/swagger-ui.html` 
 
 3. Enter the topping data in json format as below in Body tab as `{ "id":"3","topping":"Bacon","price":"3.00","veganFlag":"false" }`
 
+#### Input
+
+![alt text](https://github.com/vasantteja/com.pizza/blob/master/images/inputfortoppingcreation.png)
+
+#### Output
+
+![alt text](https://github.com/vasantteja/com.pizza/blob/master/images/createtoppingop.png)
+
+### Step 5: Fetching a topping by its name
+
+1. This endpoint has been designed to retrieve a topping data using topping data name. Currently, it's a static list, but it will be enhanced to read from a database.
+
+
+2. We can access this endpoint by selecting GET and entering the url `http://localhost:8080/toppings/fetchtoppingbyname/Bacon?access_token=accessToken`
+
+![alt text](https://github.com/vasantteja/com.pizza/blob/master/images/createtoppingop.png)
 
    
    
