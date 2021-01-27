@@ -22,9 +22,13 @@ All the endpoints can be found by visiting `localhost:8080/api/swagger-ui.html` 
 
 1. Login into the Oauth website `http://localhost:8080/oauth/token`.
 
+![alt text](https://github.com/vasantteja/com.pizza/blob/master/images/oauthurl.png)
+
 2. In the Auth tab, select **Basic Auth** under **Type**.
 
 3. In the Auth tab, enter the user `devglan-client` as Username and `devglan-secret` as Password.
+
+![alt text](https://github.com/vasantteja/com.pizza/blob/master/images/Auth.png)
 
 4. In the Body tab, choose x-www-form-urlencoded and enter the following details:
 
@@ -33,6 +37,8 @@ All the endpoints can be found by visiting `localhost:8080/api/swagger-ui.html` 
    password-password
 
    grant_type-password
+
+![alt text](https://github.com/vasantteja/com.pizza/blob/master/images/Body.png)
    
    
 
