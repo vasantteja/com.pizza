@@ -58,6 +58,16 @@ All the endpoints can be found by visiting `localhost:8080/api/swagger-ui.html` 
 
 2. We can access this endpoint by selecting GET and entering the url `http://localhost:8080/toppings/fetchalltoppings?access_token=accessToken`
 
+![alt text](https://github.com/vasantteja/com.pizza/blob/master/images/fetachAllToppingsendpointop.png)
+
+### Step 4: Creating a topping
+
+1. This endpoint has been designed to insert the topping into a database. Explicitly, here we are inserting the topping to a list.
+
+2. We can access this endpoint by selecting POST and entering the url `http://localhost:8080/toppings/createtopping?access_token=accessToken`
+
+3. Enter the topping data in json format as below in Body tab as `{ "id":"3","topping":"Bacon","price":"3.00","veganFlag":"false" }`
+
 
    
    
