@@ -50,6 +50,15 @@ All the endpoints can be found by visiting `localhost:8080/api/swagger-ui.html` 
 
 2. We can access this endpoint by selecting GET and entering the url `http://localhost:8080/users/user/fetchallusers?access_token=accessToken`
 
+![alt text](https://github.com/vasantteja/com.pizza/blob/master/images/fetchallusersendpointop.png)
+
+### Step 3: Fetching All toppings
+
+1. This endpoint has been designed to expose all toppings to the consumer. Currently, it's a static list, but it will be enhanced to read from a database.
+
+2. We can access this endpoint by selecting GET and entering the url `http://localhost:8080/toppings/fetchalltoppings?access_token=accessToken`
+
+
    
    
 
